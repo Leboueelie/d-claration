@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pour Roxane Divine ❤️</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #ff6b8b;
+            --secondary-color: #ffd3d6;
+            --accent-color: #ff8e9e;
+            --dark-color: #6a2c3e;
+            --light-color: #fff9fa;
+            --text-color: #333;
+            --shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--light-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            overflow-x: hidden;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+            color: white;
+            text-align: center;
+            padding: 2rem 1rem;
+            box-shadow: var(--shadow);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hearts-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.2;
+            z-index: 1;
+        }
+
+        .heart-bg {
+            position: absolute;
+            font-size: 1.5rem;
+            color: white;
+            animation: float 6s infinite ease-in-out;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(10deg); }
+        }
+
+        header .container {
+            position: relative;
+            z-index: 2;
+        }
+
+        h1 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 3.5rem;
+            margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            font-weight: 300;
+            opacity: 0.9;
+        }
+
+        /* Main Content */
+        main {
+            flex: 1;
+            padding: 3rem 0;
+        }
+
+        .section {
+            margin-bottom: 3rem;
+            padding: 2rem;
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .section-title {
+            font-family: 'Dancing Script', cursive;
+            color: var(--primary-color);
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .message-content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .message-content p {
+            margin-bottom: 1.5rem;
+        }
+
+        .highlight {
+            color: var(--primary-color);
+            font-weight: 500;
+        }
+
+        /* Reasons Section */
+        .reasons-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .reason-card {
+            background-color: var(--secondary-color);
+            padding: 1.5rem;
+            border-radius: 10px;
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .reason-card:hover {
+            background-color: var(--primary-color);
+            color: white;
+            transform: scale(1.05);
+        }
+
+        .reason-card i {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .reason-card:hover i {
+            color: white;
+        }
+
+        /* Question Section */
+        .question-section {
+            text-align: center;
+            background: linear-gradient(135deg, var(--secondary-color) 0%, #ffecf0 100%);
+        }
+
+        .question {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            font-weight: 500;
+        }
+
+        .buttons-container {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        .btn {
+            padding: 1rem 2.5rem;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: var(--transition);
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-yes {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .btn-yes:hover {
+            background-color: var(--dark-color);
+            transform: scale(1.1);
+            box-shadow: 0 5px 15px rgba(255, 107, 139, 0.4);
+        }
+
+        .btn-no {
+            background-color: #f0f0f0;
+            color: var(--text-color);
+        }
+
+        .btn-no:hover {
+            background-color: #e0e0e0;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+            text-align: center;
+            padding: 2rem 1rem;
+            margin-top: auto;
+        }
+
+        .footer-heart {
+            color: var(--primary-color);
+            animation: heartbeat 1.5s infinite;
+        }
+
+        @keyframes heartbeat {
+            0% { transform: scale(1); }
+            5% { transform: scale(1.2); }
+            10% { transform: scale(1.1); }
+            15% { transform: scale(1.3); }
+            20% { transform: scale(1); }
+            100% { transform: scale(1); }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .question {
+                font-size: 1.5rem;
+            }
+            
+            .btn {
+                padding: 0.8rem 1.8rem;
+                font-size: 1rem;
+            }
+            
+            .reasons-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .subtitle {
+                font-size: 1rem;
+            }
+            
+            .buttons-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .section {
+                padding: 1.5rem;
+            }
+        }
+
+        /* Success Message */
+        .success-message {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .success-content {
+            background: white;
+            padding: 3rem;
+            border-radius: 15px;
+            text-align: center;
+            max-width: 500px;
+            width: 90%;
+            animation: popup 0.5s ease;
+        }
+
+        @keyframes popup {
+            0% { transform: scale(0.5); opacity: 0; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+
+        .success-content h2 {
+            color: var(--primary-color);
+            font-family: 'Dancing Script', cursive;
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .confetti {
+            position: fixed;
+            width: 10px;
+            height: 10px;
+            background-color: var(--primary-color);
+            opacity: 0;
+            z-index: 1001;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="hearts-bg" id="hearts-bg"></div>
+        <div class="container">
+            <h1>Pour Roxane Divine</h1>
+            <p class="subtitle">Une déclaration d'amour aussi unique que toi</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <div class="container">
+            <!-- Message Section -->
+            <section class="section">
+                <h2 class="section-title">Ma Cher Roxane</h2>
+                <div class="message-content">
+                    <p>Depuis que tu es entrée dans ma vie, chaque moment partagé avec toi est devenu une <span class="highlight">précieuse étincelle de bonheur</span>.</p>
+                    <p>Ton sourire illumine mes journées, ta voix apaise mon esprit, et ta présence rend chaque instant magique.</p>
+                    <p>Tu es une personne <span class="highlight">exceptionnelle</span> - pleine de grâce, d'intelligence et de bienveillance. Chaque jour à tes côtés me rappelle à quel point je suis chanceux de te connaître.</p>
+                    <p>Ce site est bien plus qu'une simple déclaration : c'est une promesse. La promesse de faire de mon mieux pour partager ensemble notre vie.</p>
+                </div>
+            </section>
+
+            <!-- Reasons Section -->
+            <section class="section">
+                <h2 class="section-title">Pourquoi je t'aime</h2>
+                <div class="reasons-container">
+                    <div class="reason-card">
+                        <i class="fas fa-heart"></i>
+                        <h3>Ton Cœur Pur</h3>
+                        <p>Tu as un cœur généreux qui ne cesse de m'émerveiller.</p>
+                    </div>
+                    <div class="reason-card">
+                        <i class="fas fa-star"></i>
+                        <h3>Ta Lumière</h3>
+                        <p>Tu irradies de positivité et illumines tout autour de toi.</p>
+                    </div>
+                    <div class="reason-card">
+                        <i class="fas fa-laugh-beam"></i>
+                        <h3>Ton Humour</h3>
+                        <p>Ton sens de l'humour unique sait toujours me faire sourire.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Question Section -->
+            <section class="section question-section">
+                <h2 class="section-title">La Question la plus importante</h2>
+                <p class="question">Roxane, veux-tu être ma petite amie ?</p>
+                <div class="buttons-container">
+                    <button class="btn btn-yes" id="yes-btn">
+                        <i class="fas fa-heart"></i> Oui, avec tout mon cœur !
+                    </button>
+                    <button class="btn btn-no" id="no-btn">
+                        <i class="fas fa-times"></i> Non
+                    </button>
+                </div>
+                <p id="response-message" style="margin-top: 2rem; font-style: italic; min-height: 30px;"></p>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>Fait avec <span class="footer-heart">❤️</span> pour la merveilleuse Roxane Divine</p>
+            <p>Chaque jour à tes côtés est un cadeau précieux</p>
+        </div>
+    </footer>
+
+    <!-- Success Message -->
+    <div class="success-message" id="success-message">
+        <div class="success-content">
+            <h2>Merci Roxane !</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 1.5rem;">Tu viens de rendre ma vie infiniment plus belle.</p>
+            <p style="margin-bottom: 1.5rem;">Je te promets de faire de mon mieux chaque jour pour être à la hauteur de ton amour.</p>
+            <p style="font-weight: 500;">Notre aventure commence maintenant...</p>
+            <button id="close-success" style="margin-top: 2rem; padding: 0.8rem 2rem; background-color: var(--primary-color); color: white; border: none; border-radius: 50px; cursor: pointer; font-size: 1rem;">Continuer l'aventure</button>
+        </div>
+    </div>
+
+    <script>
+        // Create floating hearts in background
+        function createHearts() {
+            const heartsBg = document.getElementById('hearts-bg');
+            const heartCount = 25;
+            
+            for (let i = 0; i < heartCount; i++) {
+                const heart = document.createElement('div');
+                heart.classList.add('heart-bg');
+                heart.innerHTML = '❤️';
+                
+                // Random position
+                heart.style.left = Math.random() * 100 + '%';
+                heart.style.top = Math.random() * 100 + '%';
+                
+                // Random animation delay
+                heart.style.animationDelay = Math.random() * 5 + 's';
+                
+                // Random size
+                const size = Math.random() * 1 + 0.5;
+                heart.style.fontSize = size + 'rem';
+                
+                heartsBg.appendChild(heart);
+            }
+        }
+
+        // Handle Yes button click
+        document.getElementById('yes-btn').addEventListener('click', function() {
+            // Create confetti effect
+            createConfetti();
+            
+            // Show success message
+            document.getElementById('success-message').style.display = 'flex';
+            
+            // Update response message
+            document.getElementById('response-message').innerHTML = "Je suis la personne la plus heureuse du monde ! Merci d'avoir accepté, ma chère Roxane ❤️";
+            
+            // Play a sound (optional)
+            playSuccessSound();
+        });
+
+        // Handle No button interaction (with a little fun)
+        const noBtn = document.getElementById('no-btn');
+        const messages = [
+            "Es-tu sûr(e) ? Réfléchis bien...",
+            "S'il te plaît, reconsidère ta réponse !",
+            "Je ne peux pas accepter un non...",
+            "Donne-moi une chance, je t'en prie !",
+            "Dernière opportunité de dire oui !",
+            "Bon d'accord, je vais tenter ma chance autrement..."
+        ];
+        
+        let messageIndex = 0;
+        let clickCount = 0;
+        
+        noBtn.addEventListener('click', function() {
+            if (clickCount < messages.length) {
+                document.getElementById('response-message').innerHTML = messages[clickCount];
+                messageIndex++;
+                clickCount++;
+                
+                // Make the button smaller and harder to click each time
+                const currentScale = 1 - (clickCount * 0.1);
+                noBtn.style.transform = `scale(${currentScale})`;
+                
+                // Move the button to a random position after 3 clicks
+                if (clickCount >= 3) {
+                    const x = Math.random() * (window.innerWidth - noBtn.offsetWidth);
+                    const y = Math.random() * (window.innerHeight - noBtn.offsetHeight);
+                    noBtn.style.position = 'absolute';
+                    noBtn.style.left = x + 'px';
+                    noBtn.style.top = y + 'px';
+                }
+                
+                // After the last message, change the button to "Peut-être"
+                if (clickCount === messages.length) {
+                    setTimeout(() => {
+                        noBtn.innerHTML = '<i class="fas fa-question-circle"></i> Peut-être...';
+                        noBtn.id = 'maybe-btn';
+                        noBtn.style.position = 'static';
+                        noBtn.style.transform = 'scale(1)';
+                        
+                        // Change maybe button to eventually say yes
+                        document.getElementById('maybe-btn').addEventListener('click', function() {
+                            document.getElementById('response-message').innerHTML = "Un 'peut-être' est déjà un bon début ! Je vais tout faire pour le transformer en 'oui' ❤️";
+                            this.style.display = 'none';
+                        });
+                    }, 500);
+                }
+            }
+        });
+
+        // Create confetti effect
+        function createConfetti() {
+            const colors = ['#ff6b8b', '#ff8e9e', '#ffd3d6', '#6a2c3e'];
+            
+            for (let i = 0; i < 150; i++) {
+                const confetti = document.createElement('div');
+                confetti.classList.add('confetti');
+                
+                // Random color
+                confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+                
+                // Random position
+                confetti.style.left = Math.random() * 100 + 'vw';
+                confetti.style.top = '-10px';
+                
+                // Random size
+                const size = Math.random() * 10 + 5;
+                confetti.style.width = size + 'px';
+                confetti.style.height = size + 'px';
+                
+                // Random shape
+                if (Math.random() > 0.5) {
+                    confetti.style.borderRadius = '50%';
+                }
+                
+                document.body.appendChild(confetti);
+                
+                // Animate confetti
+                const animation = confetti.animate([
+                    { transform: `translateY(0) rotate(0deg)`, opacity: 1 },
+                    { transform: `translateY(${window.innerHeight}px) rotate(${Math.random() * 360}deg)`, opacity: 0 }
+                ], {
+                    duration: Math.random() * 3000 + 2000,
+                    easing: 'cubic-bezier(0.215, 0.610, 0.355, 1)'
+                });
+                
+                // Remove confetti after animation
+                animation.onfinish = () => {
+                    confetti.remove();
+                };
+            }
+        }
+
+        // Play a subtle success sound
+        function playSuccessSound() {
+            try {
+                const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+                const oscillator = audioContext.createOscillator();
+                const gainNode = audioContext.createGain();
+                
+                oscillator.connect(gainNode);
+                gainNode.connect(audioContext.destination);
+                
+                oscillator.frequency.setValueAtTime(523.25, audioContext.currentTime); // C5
+                oscillator.frequency.setValueAtTime(659.25, audioContext.currentTime + 0.1); // E5
+                oscillator.frequency.setValueAtTime(783.99, audioContext.currentTime + 0.2); // G5
+                
+                gainNode.gain.setValueAtTime(0.3, audioContext.currentTime);
+                gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 1);
+                
+                oscillator.start(audioContext.currentTime);
+                oscillator.stop(audioContext.currentTime + 1);
+            } catch (e) {
+                // Audio might not be supported in some browsers
+                console.log("Audio context not supported");
+            }
+        }
+
+        // Close success message
+        document.getElementById('close-success').addEventListener('click', function() {
+            document.getElementById('success-message').style.display = 'none';
+        });
+
+        // Initialize the page
+        window.addEventListener('DOMContentLoaded', function() {
+            createHearts();
+            
+            // Add a sweet initial message
+            setTimeout(() => {
+                document.getElementById('response-message').innerHTML = "Je t'attends avec impatience, ma chère Roxane...";
+            }, 1000);
+        });
+    </script>
+</body>
+</html>
